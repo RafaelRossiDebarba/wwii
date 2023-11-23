@@ -14,9 +14,38 @@ Theatre History of Operations (THOR), é um banco de dados meticulosamente culti
 
 link do dataset: https://data.world/datamil/world-war-ii-thor-data
 
-link github:
+link github: https://github.com/RafaelRossiDebarba/wwii
 
 # Dataset
 
 O dataset é dividido em três arquivos. THOR_WWII_AIRCRAFT_GLOSS.csv contém as aeronaves, THOR_WWII_WEAPON_GLOSS.csv contém as bombas, THOR_WWII_DATA_CLEAN.csv contem as missoẽs.
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(tidyverse)
+```
+
+```{r echo=FALSE}
+aircraft = read.csv('~/SynologyDrive/Data Science/Trabalho final/WWII/dataset/THOR_WWII_AIRCRAFT_GLOSS.csv')
+data = read.csv('~/SynologyDrive/Data Science/Trabalho final/WWII/dataset/THOR_WWII_DATA_CLEAN.csv')
+weapon = read.csv('~/SynologyDrive/Data Science/Trabalho final/WWII/dataset/THOR_WWII_WEAPON_GLOSS.csv')
+
+data$Date <- as.Date(data$MSNDATE, "%m/%d/%Y")
+data["NUMBER_OF_HE"][is.na(data["NUMBER_OF_HE"])] <- 0
+data["NUMBER_OF_IC"][is.na(data["NUMBER_OF_IC"])] <- 0
+data["NUMBER_OF_FRAG"][is.na(data["NUMBER_OF_FRAG"])] <- 0
+```
+
+## Gráficos
+
+Como pode ser visto a seguir temos um gráficos com o total de bombas lançadas por cada força aerea, iniciando em 1939 ate 1945.
+
+```{r echo=FALSE}
+total_bombs_by_year <- data %>% group_by(year = format(data$Date, "%Y"), NAF) %>% 
+  summarise(total_bombs = sum(NUMBER_OF_HE, NUMBER_OF_IC, NUMBER_OF_FRAG), .groups = 'drop')
+
+total_bombs_by_year %>%
+  ggplot(aes(x = year, y = total_bombs, fill = NAF)) +
+  geom_col(position = "dodge")
+```
 
