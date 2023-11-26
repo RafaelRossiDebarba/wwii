@@ -1,7 +1,7 @@
 ---
 title: "World War II"
 author: "Rafael Rossi Debarba"
-date: "2023-11-17"
+date: "2023-11-26"
 output: html_document
 ---
 
@@ -16,13 +16,119 @@ link do dataset: https://data.world/datamil/world-war-ii-thor-data
 
 link github: https://github.com/RafaelRossiDebarba/wwii
 
-# Dataset
+## Dataset
 
 O dataset é dividido em três arquivos. THOR_WWII_AIRCRAFT_GLOSS.csv contém as aeronaves, THOR_WWII_WEAPON_GLOSS.csv contém as bombas, THOR_WWII_DATA_CLEAN.csv contem as missoẽs.
+
+# THOR_WWII_AIRCRAFT_GLOSS
+
+Este arquivo contém as aeronaves, com um total de 52, com os seguintes colunas:<br>
+<table><thead><th>Nome da coluna</th><th>Descrição</th></thead>
+  <tbody>
+    <tr><td>GLOSS_ID</td><td>Identificador</td></tr>
+    <tr><td>AIRCRAFT</td><td>Nome do avião para os militares</td></tr>
+    <tr><td>NAME</td><td>Nome do avião</td></tr>
+    <tr><td>FULL_NAME</td><td>Nome completo do avião</td></tr>
+    <tr><td>AIRCRAFT_TYPE</td><td>Tipo da aeronave</td></tr>
+    <tr><td>HYPERLINK</td><td>Link para conhecer mais sobre o avião</td></tr>
+  </tbody>
+</table>
+
+# THOR_WWII_WEAPON_GLOSS
+Este arquivo contém as bombas, com um total de 59 modelos, com os seguintes dados sobre cada uma delas.<br>
+<table><thead><th>Nome da coluna</th><th>Descrição</th></thead>
+  <tbody>
+    <tr><td>RN</td><td>Identificador</td></tr>
+    <tr><td>COUNTRY</td><td>País</td></tr>
+    <tr><td>WEAPON_NAME</td><td>Nome da bomba</td></tr>
+    <tr><td>WEAPON_TYPE</td><td>Tipo da bomba</td></tr>
+    <tr><td>WEAPON_CLASS</td><td>Categoria da bomba que pode ser IC = Incendiario, HE =  Frag</td></tr>
+    <tr><td>NUMBER_OF_BOMBLETS</td><td>Número de Bomblets</td></tr>
+    <tr><td>ALT_WEAPON_NAME</td><td>Nome alternativo</td></tr>
+    <tr><td>WEAPON_DESCRIPTION</td><td>Descrição</td></tr>
+  </tbody>
+</table>
+
+## THOR_WWII_DATA_CLEAN
+
+Este arquivo contém todas as missões, com um total de 178281 missões.
+
+<table>
+  <thead>
+    <th>Nome da coluna</th>
+    <th>Descrição</th>
+  </thead>
+  <tbody>
+    <tr><td>AC_AIRBORNE</td><td>Aeronave em voo</td></tr>
+    <tr><td>AC_ATTACKING</td><td>Aeronave atacando</td></tr>
+    <tr><td>AC_DAMAGED</td><td>Total de aeronaves danificadas</td></tr>
+    <tr><td>AC_DROPPING</td><td>Número de aeronaves lançando bombas</td></tr>
+    <tr><td>AC_LOST</td><td>Total de aeronaves perdidas</td></tr>
+    <tr><td>AIRCRAFT_NAME</td><td>Nome da aeronave</td></tr>
+    <tr><td>ALTITUDE</td><td>Altitude</td></tr>
+    <tr><td>ALTITUDE_FEET</td><td>Altitude em pés</td></tr>
+    <tr><td>BDA</td><td>Avaliação de Danos por Bomba</td></tr>
+    <tr><td>CALLSIGN</td><td>Indicativo</td></tr>
+    <tr><td>COUNTRY_FLYING_MISSION</td><td>País Executando a Missão</td></tr>
+    <tr><td>DATABASE_EDIT_COMMENTS</td><td>Comentários de Edição no Banco de Dados</td></tr>
+    <tr><td>LATITUDE</td><td>Latitude</td></tr>
+    <tr><td>LBS_FRAG</td><td>Peso de dispositivos de fragmentação em libras</td></tr>
+    <tr><td>LBS_HE</td><td>Peso de Explosivos em libras</td></tr>
+    <tr><td>LBS_IC</td><td>Peso de dispositivos incendiários em libras</td></tr>
+    <tr><td>LONGITUDE</td><td>Longitude</td></tr>
+    <tr><td>MASTER_INDEX_NUMBER</td><td>Identificador do Registro Fonte</td></tr>
+    <tr><td>MDS</td><td>Série de Design de Missão da Aeronave</td></tr>
+    <tr><td>MECH_FAIL_AC</td><td>Aeronave falhou devido a falha mecânica</td></tr>
+    <tr><td>MISC_FAIL_AC</td><td>Aeronave falhou por razões diversas</td></tr>
+    <tr><td>MISSION_COMMENTS</td><td>Comentários da Missão</td></tr>
+    <tr><td>MSN_TYPE</td><td>Tipo de Missão</td></tr>
+    <tr><td>MSNDATE</td><td>Data da Missão</td></tr>
+    <tr><td>NAF</td><td>Força Aérea Numerada</td></tr>
+    <tr><td>NUMBER_OF_FRAG</td><td>Número de dispositivos de fragmentação</td></tr>
+    <tr><td>NUMBER_OF_HE</td><td>Número de Explosivos</td></tr>
+    <tr><td>NUMBER_OF_IC</td><td>Número de dispositivos incendiários</td></tr>
+    <tr><td>OTHER_FAIL_AC</td><td>Aeronave falhou por outras razões</td></tr>
+    <tr><td>ROUNDS_AMMO</td><td>Rodadas de munição</td></tr>
+    <tr><td>SIGHTING_EXPLANATION</td><td>Explicação do Método de Avistamento</td></tr>
+    <tr><td>SIGHTING_METHOD_CODE</td><td>Código do Método de Avistamento</td></tr>
+    <tr><td>SOURCE</td><td>Documento Fonte</td></tr>
+    <tr><td>SPARES_RETURN_AC</td><td>Aeronave retornou devido a peças de reposição</td></tr>
+    <tr><td>TAKEOFF_BASE</td><td>Base de Lançamento para a Missão</td></tr>
+    <tr><td>TAKEOFF_COUNTRY</td><td>País da Base de Lançamento</td></tr>
+    <tr><td>TAKEOFF_LATITUDE</td><td>Latitude da Base de Lançamento</td></tr>
+    <tr><td>TAKEOFF_LONGITUDE</td><td>Longitude da Base de Lançamento</td></tr>
+    <tr><td>TARGET_PRIORITY</td><td>Prioridade do Alvo</td></tr>
+    <tr><td>TARGET_PRIORITY_EXPLANATION</td><td>Explicação da Prioridade do Alvo</td></tr>
+    <tr><td>TGT_COUNTRY</td><td>País-Alvo</td></tr>
+    <tr><td>TGT_COUNTRY_CODE</td><td>Código do País-Alvo</td></tr>
+    <tr><td>TGT_ID</td><td>Código de Identificação do Alvo</td></tr>
+    <tr><td>TGT_INDUSTRY</td><td>Descrição da Indústria-Alvo</td></tr>
+    <tr><td>TGT_INDUSTRY_CODE</td><td>Código da Indústria-Alvo</td></tr>
+    <tr><td>TGT_LOCATION</td><td>Cidade-Alvo</td></tr>
+    <tr><td>TGT_TYPE</td><td>Descrição do Tipo de Alvo</td></tr>
+    <tr><td>THEATER</td><td>Teatro de Operações</td></tr>
+    <tr><td>TIME_OVER_TARGET</td><td>Tempo sobre o alvo</td></tr>
+    <tr><td>TONS_LOST__JETTISONED</td><td>Toneladas de munição abandonadas</td></tr>
+    <tr><td>TONS_OF_FRAG</td><td>Peso de dispositivos de fragmentação em toneladas</td></tr>
+    <tr><td>TONS_OF_HE</td><td>Peso de Explosivos em toneladas</td></tr>
+    <tr><td>TONS_OF_IC</td><td>Peso de dispositivos incendiários em toneladas</td></tr>
+    <tr><td>TOTAL_LBS</td><td>Peso total de todas as armas em libras</td></tr>
+    <tr><td>TOTAL_TONS</td><td>Peso total de todas as armas em toneladas</td></tr>
+    <tr><td>TYPE_OF_FRAG</td><td>Tipo de dispositivos de fragmentação</td></tr>
+    <tr><td>TYPE_OF_HE</td><td>Tipo de Explosivo</td></tr>
+    <tr><td>TYPE_OF_IC</td><td>Tipo de dispositivos incendiários</td></tr>
+    <tr><td>UNIT_ID</td><td>Identificador da Unidade</td></tr>
+    <tr><td>WWII_ID</td><td>Identificador Único</td></tr>
+    <tr><td>WX_FAIL_AC</td><td>Aeronave falhou devido a condições climáticas</td></tr>
+</tbody>
+</table>
+
+## Gráficos
 
 ```{r setup, include=FALSE}
 library(ggplot2)
 library(tidyverse)
+library(leaflet)
 ```
 
 ```{r echo=FALSE}
@@ -36,9 +142,7 @@ data["NUMBER_OF_IC"][is.na(data["NUMBER_OF_IC"])] <- 0
 data["NUMBER_OF_FRAG"][is.na(data["NUMBER_OF_FRAG"])] <- 0
 ```
 
-## Gráficos
-
-Como pode ser visto a seguir temos um gráficos com o total de bombas lançadas por cada força aerea, iniciando em 1939 ate 1945.
+Como pode ser visto a seguir temos um gráficos com o total de bombas lançadas por cada força aérea, iniciando em 1939 até 1945.
 
 ```{r echo=FALSE}
 total_bombs_by_year <- data %>% group_by(year = format(data$Date, "%Y"), NAF) %>% 
@@ -49,3 +153,17 @@ total_bombs_by_year %>%
   geom_col(position = "dodge")
 ```
 
+No próximo gráfico mostra as posições com base na latitude e longitude das missões, para realizar esse gráfico foi necessário retirar os valores nulos da latitude e longitude, junto retirando uma posição que fica bem deslocada do gráfico, assim podendo visualizar melhor as posições das missões.
+
+```{r echo=FALSE}
+clear_data <- data[which(data$LONGITUDE<500),]
+clear_data <- clear_data[!is.na(clear_data$LATITUDE),]
+clear_data <- clear_data[!is.na(clear_data$LONGITUDE),]
+kmeans_data <- clear_data[, c("LATITUDE", "LONGITUDE")]
+set.seed(10)
+data_cluster <- kmeans(kmeans_data, 10, nstart = 20)
+data_cluster$cluster <- as.factor(data_cluster$cluster)
+
+ggplot(kmeans_data, aes(LATITUDE, LONGITUDE, color = data_cluster$cluster)) + 
+  geom_point()
+```
